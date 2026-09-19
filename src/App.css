@@ -1,0 +1,201 @@
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --text-light: #6b7280;
+
+  --border: #d1d5db;
+
+  --primary: #7c3aed;
+  --primary-light: #ede9fe;
+
+  --success: #16a34a;
+  --danger: #dc2626;
+
+  --card-bg: #fafafa;
+
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12131a;
+    --text: #e5e7eb;
+    --text-light: #9ca3af;
+
+    --border: #3a3d46;
+
+    --primary: #a78bfa;
+    --primary-light: rgba(167, 139, 250, 0.15);
+
+    --card-bg: #1a1c23;
+  }
+}
+
+/* BASE */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: var(--primary-light);
+}
+
+button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* CARDS */
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--card-bg);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+/* STATUS */
+.status {
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.status.lost {
+  color: var(--danger);
+}
+
+.status.found {
+  color: var(--success);
+}
+
+/* ========================= */
+/* FORM STYLING */
+/* ========================= */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* INPUTS */
+input,
+select{
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  height: 120px;
+}
+
+/* FOCUS */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+/* MAP */
+.map-box {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* ADDRESS */
+.address-preview {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* SUBMIT BUTTON (FORM ONLY) */
+.form button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 500;
+}
