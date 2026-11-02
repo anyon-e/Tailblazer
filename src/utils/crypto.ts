@@ -1,3 +1,4 @@
+// Hash a password using SHA-256
 export async function hashPassword(password: string): Promise<string> {
   const encoder = new TextEncoder();
   const data = encoder.encode(password);
