@@ -37,7 +37,3 @@ Setup `.env`
 - `/browse` browse reports
 - `/report/:id` view a specific report with specified `id`
 - `/report/new` make a new report
-
-### **AI Usage**
-
-- github copilot inline suggestions were used.
